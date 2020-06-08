@@ -1,0 +1,8 @@
+0:0:0:0:0:0:0:1 - - [08/Jun/2020:14:33:02 +0400] "GET /lab3/ HTTP/1.1" 200 2650 http-bio-8081-exec-2 1521
+0:0:0:0:0:0:0:1 - - [08/Jun/2020:14:33:03 +0400] "GET /lab3/javax.faces.resource/reset.css.xhtml;jsessionid=439ADF6265B11990036EF3BE3C5DA720?ln=css HTTP/1.1" 200 1717 http-bio-8081-exec-3 10
+0:0:0:0:0:0:0:1 - - [08/Jun/2020:14:33:03 +0400] "GET /lab3/javax.faces.resource/style.css.xhtml;jsessionid=439ADF6265B11990036EF3BE3C5DA720?ln=css HTTP/1.1" 200 3110 http-bio-8081-exec-1 65
+0:0:0:0:0:0:0:1 - - [08/Jun/2020:14:33:03 +0400] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8081-exec-5 0
+0:0:0:0:0:0:0:1 - - [08/Jun/2020:14:34:04 +0400] "POST /lab3/view/index.xhtml;jsessionid=439ADF6265B11990036EF3BE3C5DA720 HTTP/1.1" 200 14744 http-bio-8081-exec-6 2780
+0:0:0:0:0:0:0:1 - - [08/Jun/2020:14:35:08 +0400] "POST /lab3/view/result.xhtml HTTP/1.1" 200 8328 http-bio-8081-exec-8 3309
+0:0:0:0:0:0:0:1 - - [08/Jun/2020:14:36:58 +0400] "POST /lab3/view/result.xhtml HTTP/1.1" 200 1395 http-bio-8081-exec-3 2281
+0:0:0:0:0:0:0:1 - - [08/Jun/2020:14:37:59 +0400] "POST /lab3/view/result.xhtml HTTP/1.1" 200 2199 http-bio-8081-exec-3 2398

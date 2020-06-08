@@ -1,0 +1,144 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	font-family: 'Fira Sans', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	background-color: #171919;
+	color: #fff;
+	min-width: 320px;
+	overflow-x: hidden;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+button:hover{
+	cursor: pointer;
+}
+.container{
+	max-width: 1920px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+.content{
+	display: flex;
+}
+.content__name{
+	font-weight: 800;
+	line-height: 156px;
+	min-height: 400px;
+	width: 75%;
+	font-size: 150px;
+	position: relative;
+}
+.content__name--title{
+	position: absolute;
+	font-size: 140px;
+    top: 18px;
+    color: #93add3;
+    left: 52px;
+}
+.content__name--subtitle{
+	font-size: 200px;
+	opacity: 0.04;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.content__menu{
+	padding-top: 80px;
+	margin-right: 100px;
+}
+.menu__text{
+	max-width: 600px;
+    margin-bottom: 30px;
+	font-weight: 500;
+	font-size: 30px;
+	line-height: 32px;
+}
+.menu__forms{
+	max-width: 300px;
+	font-size: 20px;
+	font-weight: 300;
+}
+.forms__login{
+	margin-bottom: 20px;
+}
+.forms__password{
+	margin-bottom: 20px;
+}
+.forms__btn{
+	padding: 10px;
+	font-weight: 500;
+}
+.menu__forms input[type="text"], 
+.menu__forms input[type="password"]{
+	width: 100%;
+	margin-top: 5px;
+	padding: 10px;
+	font-weight: 500;
+}
+.remark__forms [type="text"],
+.remark__forms [type="password"]{
+	border: 1.5px solid #93add3;
+}
+.remark{
+	font-size: 16px;
+	margin: 10px 0;
+}
+.return__text{
+	margin-bottom: 35px;
+}
+.return--now a{
+	padding: 8px;
+	color: #93add3;
+	border: 1.5px solid #93add3;
+	border-radius: 3px;
+}
+.return--now a:hover{
+	color: #1a74f5;
+	border: 1.5px solid #1a74f5;
+}
+.user-space{
+	padding-top: 80px;
+	font-size: 30px;
+}
+.greeting-user{
+	font-size: 50px;
+	font-weight: 500;
+	margin-bottom: 30px;
+}
+.reset__name--title{
+	max-width: 700px;
+}
+.user-table th{
+	padding: 10px;
+}
+.user-table tr:hover{
+	color: #93add3;
+}
+table{
+	text-align: center;
+}
+.author-table{
+	margin: 0 auto 40px;
+}
+.xml-download{
+	text-align: center;
+	padding-top: 40px;
+	margin-bottom: 40px;
+}
+.xml-download a{
+	border: 1.5px solid #fff;
+	border-radius: 5px;
+	padding: 6px;
+}
+.xml-download a:hover {
+	color: #93add3;
+	border: 1.5px solid #93add3;
+	border-radius: 5px;
+}
+
+

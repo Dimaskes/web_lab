@@ -1,0 +1,14 @@
+dataSource\DataSource.class
+beans\BookBean.class
+entities\Client.class
+beans\ClientEJB.class
+dataSource\XmlConverter.class
+beans\ClientBean.class
+entities\Book.class
+beans\AuthorListBean.class
+entities\Author.class
+servlet\GetXmlResponse.class
+entities\User.class
+servlet\GetUserInfo.class
+beans\AuthorBean.class
+entities\AuthorList.class

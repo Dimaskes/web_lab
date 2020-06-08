@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <title>Library</title>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:100,300,400,500,800;display=swap" rel="stylesheet"/>
+    <h:outputStylesheet library="css" name="reset.css"/>
+    <h:outputStylesheet library="css" name="style.css"/>
+</h:head>
+<h:body>
+    <h:form>
+        <div class="container">
+            <div class="insert--form">
+                <h:messages globalOnly="true" style="color:red;margin:8px;"/>
+                <h:outputLabel styleClass="insert--form_title">
+                    Название
+                </h:outputLabel>
+                <h:inputText id="name" value="#{book.book.name}" required="true"
+                             styleClass="insert--form_field"
+                             requiredMessage="Название введено неверно">
+                    <f:validateRequired/>
+                </h:inputText>
+                <h:message for="name" style="color:red; display: grid;margin: -8px 0 14px;"/>
+
+                <h:outputLabel styleClass="insert--form_title">
+                    Кол-во страниц
+                </h:outputLabel>
+                <h:inputText id="count_page" value="#{book.book.countPage}" required="true"
+                             styleClass="insert--form_field"
+                             requiredMessage="Количество страниц введено неверно"
+                             validatorMessage="Количество страниц введено неверно"
+                             converterMessage="Количество страниц введено неверно">
+                    <f:validateDoubleRange minimum="1" maximum="10000"/>
+                    <f:validateRequired/>
+                </h:inputText>
+                <h:message for="count_page" style="color:red; display: grid; margin: -8px 0 14px;"/>
+
+                <h:outputLabel styleClass="insert--form_title">
+                    Год
+                </h:outputLabel>
+                <h:inputText id="year" value="#{book.book.year}" required="true"
+                             styleClass="insert--form_field"
+                             requiredMessage="Год введен неверно"
+                             validatorMessage="Год введен неверно"
+                             converterMessage="Год введен неверно">
+                    <f:validateRequired/>
+                    <f:validateDoubleRange minimum="1000" maximum="2020"/>
+                </h:inputText>
+                <h:message for="year" style="color:red; display: grid;margin: -8px 0 14px;"/>
+
+                <h:outputLabel styleClass="insert--form_title">
+                    Цена
+                </h:outputLabel>
+                <h:inputText id="price" value="#{book.book.price}" required="true"
+                             styleClass="insert--form_field"
+                             requiredMessage="Цена введена неверно"
+                             validatorMessage="Цена введена неверно"
+                             converterMessage="Цена введена неверно">
+                    <f:validateRequired/>
+                    <f:validateDoubleRange minimum="1" maximum="1000000"/>
+                </h:inputText>
+                <h:message for="price" style="color: red; display: grid;margin: -8px 0 14px;"/>
+
+                <h:outputLabel styleClass="insert--form_title">
+                    ID автора
+                </h:outputLabel>
+                <h:inputText id="author_id" value="#{book.book.authorId}" required="true"
+                             styleClass="insert--form_field"
+                             requiredMessage="Автор введен неверно"
+                             validatorMessage="Автор введен веверно"
+                             converterMessage="Автор введен неверно">
+                    <f:validateRequired/>
+                </h:inputText>
+                <h:message for="author_id" style="color: red; display: grid;margin: -8px 0 14px;"/>
+
+                <h:commandButton value="добавить" styleClass="insert--form_btn" action="#{book.insertBook}"/>
+            </div>
+        </div>
+    </h:form>
+</h:body>
+</html>

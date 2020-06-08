@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+    <title>Library</title>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:100,300,400,500,800;display=swap" rel="stylesheet"/>
+    <h:outputStylesheet library="css" name="reset.css"/>
+    <h:outputStylesheet library="css" name="style.css"/>
+</h:head>
+<h:body>
+    <h:form>
+        <div class="container">
+            <div class="content">
+                <div class="content--wrapp">
+                    <div class="content__name">
+                        <div class="content__name--title">
+                            <h:outputText value="Онлайн библиотека WEBLAB"/>
+                        </div>
+                        <div class="content__name--subtitle">
+                            <h:outputText value="Онлайн библиотека WEBLAB"/>
+                        </div>
+                    </div>
+                    <div class="user-space content__menu">
+                        <div class="greeting-user">
+                            Здравствуйте, #{client.login}!
+                        </div>
+                    </div>
+                    <div class="user-table">
+                        <i>Авторы</i>
+                        <h:commandButton value="добавить автора" styleClass="nontitleclass"
+                                         action="#{client.moveToInsertAuthor}"/>
+                        <table class="author-table">
+                            <tr>
+                                <th>ID</th>
+                                <th>Количество<br/>книг</th>
+                            </tr>
+                            <tbody>
+                            <ui:repeat var="o" value="#{authorList.findByClientId()}">
+                                <ui:param name="auth" value="#{author.findAuthorById(o.author_id)}"/>
+                                <tr>
+                                    <td>#{auth.author}</td>
+                                    <td>#{auth.sizeBook}</td>
+                                </tr>
+                            </ui:repeat>
+                            </tbody>
+                        </table>
+                        <i>Книги</i>
+                        <h:commandButton value="добавить новую книгу" styleClass="nontitleclass"
+                                         action="#{client.moveToInsertBook}"/>
+                        <table class="book-table">
+                            <tr>
+                                <th>ID</th>
+                                <th>Название</th>
+                                <th>Год</th>
+                                <th>Количество<br/>страниц</th>
+                                <th>Цена</th>
+                                <th>ID автора</th>
+                            </tr>
+                            <tbody>
+                            <ui:repeat var="o" value="#{authorList.findByClientId()}">
+                                <ui:param name="auth" value="#{author.findAuthorById(o.author_id)}"/>
+                                <ui:repeat var="bok" value="#{book.findBookByAuthor(auth.author)}">
+                                    <tr>
+                                        <td>#{bok.id}</td>
+                                        <td>#{bok.name}</td>
+                                        <td>#{bok.year}</td>
+                                        <td>#{bok.countPage}</td>
+                                        <td>#{bok.price}</td>
+                                        <td>#{bok.authorId}</td>
+                                    </tr>
+                                </ui:repeat>
+                            </ui:repeat>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="xml-download">
+                    <div class="change-btn">
+                        <h:commandButton value="Выйти" action="#{client.logout}"/>
+                    </div>
+                    <div class="change-btn">
+                        <h:commandButton value="Скачать" action="#{client.convert}"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </h:form>
+</h:body>
+</html>
